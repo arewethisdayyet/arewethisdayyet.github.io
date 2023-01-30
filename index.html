@@ -10,7 +10,7 @@
     const date = new Date
     const result = document.getElementById("result")
     date.setHours(0, 0, 0, 0)
-    if (questiondate.getTime() < date.getTime()) {
+    if (questiondate.getTime() > date.getTime()) {
       result.innerHTML = "Not yet..."
     } else if (questiondate.getTime() == date.getTime()) {
       result.innerHTML = "YES"
