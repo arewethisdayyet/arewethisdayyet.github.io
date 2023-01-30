@@ -1,7 +1,14 @@
 <html>
 <head>
   <title></title>
-  <style></style>
+  <style>
+    body {
+      display: flex;
+    }
+    h1 {
+      margin: auto;
+    }
+  </style>
 </head>
 <body>
   <h1 id="result"></h1>
@@ -12,10 +19,13 @@
     date.setHours(0, 0, 0, 0)
     if (questiondate.getTime() > date.getTime()) {
       result.innerHTML = "Not yet..."
+      document.body.style.backgroundColor = "lightcyan"
     } else if (questiondate.getTime() == date.getTime()) {
       result.innerHTML = "YES"
+      document.body.style.backgroundColor = "aquamarine"
     } else {
       result.innerHTML = "Wait for next year..."
+      document.body.style.backgroundColor = "bisque"
     }
   </script>
 </body>
