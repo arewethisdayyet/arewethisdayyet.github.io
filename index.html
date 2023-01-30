@@ -7,7 +7,7 @@
   <h1 id="result"></h1>
   <script>
     const questiondate = Date.parse(window.location.hash)
-    const date = Date.now()
+    const date = new Date
     const result = document.getElementById("result")
     date.setHours(0, 0, 0, 0)
     if (questiondate.getTime() < date.getTime()) {
