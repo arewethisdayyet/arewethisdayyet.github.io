@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title></title>
+  <style></style>
+</head>
+<body>
+  <h1 id="result"></h1>
+  <script>
+    const questiondate = Date.parse(window.location.hash)
+    const date = Date.now()
+    const result = document.getElementById("result")
+    date.setHours(0, 0, 0, 0)
+    if (questiondate.getTime() < date.getTime()) {
+      result.innerHTML = "Not yet..."
+    } elif (questiondate.getTime() == date.getTime()) {
+      result.innerHTML = "YES"
+    } else () {
+      result.innerHTML = "Wait for next year..."
+    }
+  </script>
+</body>
+</html>
